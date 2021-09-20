@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+import { Navigation } from './component/Navigation';
+
+// import logo from './logo.svg';
+
+const appStyle = css`
+min-height: 100vh;
+background-color: black;
+color: white;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div css={appStyle}>
+      <Navigation />
     </div>
   );
 }
