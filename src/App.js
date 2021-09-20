@@ -1,13 +1,15 @@
 import './App.css';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Navigation } from './component/Navigation';
+import HeroPage from './component/HeroPage';
+import Navigation from './component/Navigation';
+import TestingPage from './component/TestingPage';
 
 // import logo from './logo.svg';
 
 const appStyle = css`
 min-height: 100vh;
-background-color: black;
+background-color: #0C022F;
 color: white;
 `
 
@@ -15,6 +17,8 @@ function App() {
   return (
     <div css={appStyle}>
       <Navigation />
+      <HeroPage />
+      <TestingPage />
     </div>
   );
 }
