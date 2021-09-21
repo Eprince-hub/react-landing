@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
 
 body {
   margin: 0;
@@ -17,8 +20,10 @@ code {
     monospace;
 }
 
-* {
-  box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
   font-family: Lato, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
