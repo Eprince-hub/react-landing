@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import AboutPage from './component/AboutPage';
 import HeroPage from './component/HeroPage';
 import Navigation from './component/Navigation';
+import Testimonials from './component/Testimonials';
 import TestingPage from './component/TestingPage';
 
 // import logo from './logo.svg';
@@ -20,6 +21,7 @@ function App() {
       <Navigation />
       <HeroPage />
       <AboutPage />
+      <Testimonials />
       <TestingPage />
     </div>
   );

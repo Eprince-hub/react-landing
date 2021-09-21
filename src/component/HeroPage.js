@@ -17,11 +17,12 @@ const heroPageStyle = css`
   max-width: 100vw;
   height: 100vh;
   background-image: url('${heroPageImage}');
-  background-position: top;
-  background-size: cover;
+  background-position: center;
+  background-size: 250%;
+  background-repeat: no-repeat;
   overflow: hidden;
-  /* background-repeat: no-repeat; */
-  padding-top: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 50rem;
 
   main {
     position: relative;
@@ -31,6 +32,7 @@ const heroPageStyle = css`
     display: flex;
     color: #fafafa;
     z-index: 1;
+    margin-top: -5rem;
 
     div:first-child {
       flex: 0 1 ${sideBoxSizes};
