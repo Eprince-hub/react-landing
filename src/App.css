@@ -34,6 +34,6 @@
   }
   to {
     transform: rotate(360deg);
-    background: #1b046d;
+    /* background: #1b046d; */
   }
 }
