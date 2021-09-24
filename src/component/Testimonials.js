@@ -91,7 +91,7 @@ const testimonialStyle = css`
     align-items: center;
     height: 10rem;
     position: absolute;
-    bottom: 17rem;
+    bottom: 13rem;
     background: transparent;
 
     button {

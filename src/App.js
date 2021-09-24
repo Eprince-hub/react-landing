@@ -2,7 +2,9 @@ import './App.css';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import AboutPage from './component/AboutPage';
+import Footer from './component/Footer';
 import HeroPage from './component/HeroPage';
+import InformationPages from './component/InformationPages';
 import Navigation from './component/Navigation';
 import Testimonials from './component/Testimonials';
 import TestingPage from './component/TestingPage';
@@ -23,6 +25,8 @@ function App() {
       <AboutPage />
       <Testimonials />
       <TestingPage />
+      <InformationPages />
+      <Footer />
     </div>
   );
 }
