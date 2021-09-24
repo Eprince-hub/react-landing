@@ -24,9 +24,9 @@ function App() {
       <HeroPage />
       <AboutPage />
       <Testimonials />
-      <TestingPage />
       <InformationPages />
       <Footer />
+      <TestingPage />
     </div>
   );
 }

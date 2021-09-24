@@ -81,12 +81,71 @@ import mainLogo from './images/type-logo-light.svg';
 //   }
 // `;
 
-const informationPagesStyle = css``;
+const informationPagesStyle = css`
+  width: 70%;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  .flexParents {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    div {
+      flex-basis: 40rem;
+      border-bottom: 5px solid blue;
+
+      h2 {
+        font-size: 3.9rem;
+        line-height: 4.3rem;
+        color: #fafafa;
+      }
+
+      p {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        color: #c9c1f3;
+      }
+
+      button {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+        color: rgb(44, 212, 217);
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+
+        :hover {
+          color: #5333ed;
+          -o-transition: all 0.4s ease-in-out;
+          -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+        }
+
+        span {
+          font-size: 1.3rem;
+          -o-transition: all 0.4s ease-in-out;
+          -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+          :hover {
+            padding-left: 1rem;
+            -o-transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default function InformationPages() {
   return (
-    <div>
-      <div>
+    <div css={informationPagesStyle}>
+      <div className="flexParents">
         <div>
           <h2>One-click WordPress site creation</h2>
           <p>
@@ -96,14 +155,16 @@ export default function InformationPages() {
             tools like a built-in database manager, SMTP server, WP_DEBUG
             toggle, and more.
           </p>
-          <button>Learn more</button>
+          <button>
+            Learn more <span>&#62;</span>
+          </button>
         </div>
         <div>
           <h1>PICTURES PLACEHOLDER</h1>
         </div>
       </div>
 
-      <div>
+      <div className="flexParents">
         <div>
           <h2>PICTURE PLACEHOLDER</h2>
         </div>
@@ -116,11 +177,13 @@ export default function InformationPages() {
             specific PHP version, DevKinsta lets you choose a version for your
             site.
           </p>
-          <button>Learn more</button>
+          <button>
+            Learn more <span>&#62;</span>
+          </button>
         </div>
       </div>
 
-      <div>
+      <div className="flexParents">
         <div>
           <h2>Local email management</h2>
           <p>
@@ -128,14 +191,16 @@ export default function InformationPages() {
             Catch and inspect outgoing emails to debug contact forms, marketing
             automations, site notifications, and more!
           </p>
-          <button>Learn more</button>
+          <button>
+            Learn more <span>&#62;</span>
+          </button>
         </div>
         <div>
           <h2>PICTURE PLACEHOLDER</h2>
         </div>
       </div>
 
-      <div>
+      <div className="flexParents">
         <div>
           <h2>PICTURE PLACEHOLDER</h2>
         </div>
@@ -146,11 +211,13 @@ export default function InformationPages() {
             Use Adminer to edit WordPress database tables, execute SQL queries,
             and more.
           </p>
-          <button>Learn more</button>
+          <button>
+            Learn more <span>&#62;</span>
+          </button>
         </div>
       </div>
 
-      <div>
+      <div className="flexParents">
         <div>
           <h2>Seamless integration with MyKinsta</h2>
           <p>
@@ -160,14 +227,16 @@ export default function InformationPages() {
             Learn more Jessie Hey, Is there anyone who tried to push a site to
             live before staging?
           </p>
-          <button>Learn more</button>
+          <button>
+            Learn more <span>&#62;</span>
+          </button>
         </div>
         <div>
           <h2>PICTURE PLACEHOLDER</h2>
         </div>
       </div>
 
-      <div>
+      <div className="flexParents">
         <div>
           <h2>PLACEHOLDER FOR A CARD</h2>
           <h2>PLACEHOLDER FOR THE SECOND CARD</h2>
@@ -183,20 +252,23 @@ export default function InformationPages() {
         </div>
       </div>
 
-      <div>
+      <div className="flexParents">
         <div>
           <h2>Powered by Docker</h2>
+          <p>
+            DevKinsta leverages the power of Docker to create a secure and fast
+            local WordPress development experience. With Docker, your local
+            site’s hosting stack is automatically containerized and optimized
+            for security and near-native performance no matter what host OS
+            you’re running.
+          </p>
         </div>
         <div>
-          DevKinsta leverages the power of Docker to create a secure and fast
-          local WordPress development experience. With Docker, your local site’s
-          hosting stack is automatically containerized and optimized for
-          security and near-native performance no matter what host OS you’re
-          running.
+          <h2>IMAGE PLACEHOLDER</h2>
         </div>
       </div>
 
-      <div>
+      <div className="flexParents">
         <div>
           <h2>PICTURE PLACEHOLDER</h2>
         </div>
@@ -209,7 +281,9 @@ export default function InformationPages() {
             French, Spanish, Portuguese, Dutch, German, Italian, Japanese,
             Swedish, and Danish.
           </p>
-          <button>Learn more</button>
+          <button>
+            Learn more <span>&#62;</span>
+          </button>
         </div>
       </div>
     </div>
