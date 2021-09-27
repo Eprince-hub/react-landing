@@ -1,6 +1,16 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
+import devkinstaImage from './images/devkinsta-create-site.png';
+import devkinstaDatabase from './images/devkinsta-database-manager.jpg';
+import devKinstaMail from './images/devkinsta-email.png';
+import devkinstaMultilingual from './images/devkinsta-multilingual.svg';
+import devkinstaPhPVersion from './images/devkinsta-php-versions.svg';
+import devKinstaIntegration from './images/devkinsta-push-to-staging.png';
+import devkinstaDocker from './images/docker.svg';
+import devkinstaPhPImage from './images/php-versions.svg';
+import devkinstacross from './images/plus.svg';
+import devkinstaBg from './images/site-creation.svg';
 import mainLogo from './images/type-logo-light.svg';
 
 // Some variables for repeated values!
@@ -82,14 +92,15 @@ import mainLogo from './images/type-logo-light.svg';
 // `;
 
 const informationPagesStyle = css`
-  width: 70%;
+  width: 90%;
   min-height: 100vh;
   margin: 0 auto;
 
   .flexParents {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-bottom: 20rem;
 
     div {
       flex-basis: 40rem;
@@ -140,12 +151,113 @@ const informationPagesStyle = css`
       }
     }
   }
+
+  .oneClickWordpressPicture {
+    background-image: url(${devkinstaPhPImage});
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .middleImage {
+      background: red;
+      width: 25rem;
+      display: inline-block;
+      margin: 0 auto;
+      position: relative;
+      left: 5rem;
+    }
+
+    img:first-of-type,
+    img:last-of-type {
+      width: 40px;
+      position: relative;
+      bottom: 21.5rem;
+    }
+
+    img:last-of-type {
+      top: 11rem;
+      left: 10rem;
+    }
+  }
+
+  .phpVersionImage {
+    background-image: url(${devkinstaBg});
+    background-repeat: no-repeat;
+
+    img {
+      display: inline-bock;
+      position: relative;
+      left: 5rem;
+      bottom: 5rem;
+      border-radius: 5px;
+    }
+  }
+
+  .localEmail {
+    padding: 0 2rem;
+  }
+
+  .devkinstaMail {
+    background-image: url(${devkinstaPhPImage});
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+      position: relative;
+      right: 3rem;
+      bottom: 2rem;
+      border-radius: 5px;
+    }
+  }
+
+  .devkinstaDataBase {
+    background-image: url(${devkinstaPhPImage});
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+      height: 250px;
+      position: relative;
+      left: 2rem;
+      bottom: 1rem;
+      border-radius: 5px;
+    }
+  }
+
+  .seamlessIntegration {
+    background-image: url(${devkinstaPhPImage});
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+      width: 500px;
+      position: relative;
+      left: 5rem;
+      bottom: 6rem;
+      border-radius: 5px;
+    }
+  }
+
+  .poweredByDocker {
+    background-image: url(${devkinstaDocker});
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .multilingual {
+    background: url(${devkinstaMultilingual});
+    background-repeat: no-repeat;
+  }
 `;
 
 export default function InformationPages() {
   return (
     <div css={informationPagesStyle}>
-      <div className="flexParents">
+      <div className="flexParents oneClickWordpress">
         <div>
           <h2>One-click WordPress site creation</h2>
           <p>
@@ -159,14 +271,20 @@ export default function InformationPages() {
             Learn more <span>&#62;</span>
           </button>
         </div>
-        <div>
-          <h1>PICTURES PLACEHOLDER</h1>
+        <div className="oneClickWordpressPicture">
+          <img src={devkinstacross} alt="One click top cross" />
+          <img
+            src={devkinstaImage}
+            alt="One click wordpress"
+            className="middleImage"
+          />
+          <img src={devkinstacross} alt="One click bottom cross" />
         </div>
       </div>
 
       <div className="flexParents">
-        <div>
-          <h2>PICTURE PLACEHOLDER</h2>
+        <div className="phpVersionImage">
+          <img src={devkinstaPhPVersion} alt="php version" />
         </div>
         <div>
           <h2>PHP 7.x and 8.x support</h2>
@@ -184,7 +302,7 @@ export default function InformationPages() {
       </div>
 
       <div className="flexParents">
-        <div>
+        <div className="localEmail">
           <h2>Local email management</h2>
           <p>
             DevKinsta ships with a powerful SMTP server and email testing tool.
@@ -195,14 +313,14 @@ export default function InformationPages() {
             Learn more <span>&#62;</span>
           </button>
         </div>
-        <div>
-          <h2>PICTURE PLACEHOLDER</h2>
+        <div className="devkinstaMail">
+          <img src={devKinstaMail} alt="local mail management" />
         </div>
       </div>
 
       <div className="flexParents">
-        <div>
-          <h2>PICTURE PLACEHOLDER</h2>
+        <div className="devkinstaDataBase">
+          <img src={devkinstaDatabase} alt="Data base management" />
         </div>
         <div>
           <h2>Built-in database manager</h2>
@@ -231,24 +349,8 @@ export default function InformationPages() {
             Learn more <span>&#62;</span>
           </button>
         </div>
-        <div>
-          <h2>PICTURE PLACEHOLDER</h2>
-        </div>
-      </div>
-
-      <div className="flexParents">
-        <div>
-          <h2>PLACEHOLDER FOR A CARD</h2>
-          <h2>PLACEHOLDER FOR THE SECOND CARD</h2>
-        </div>
-        <div>
-          <h2>A community of WordPress experts</h2>
-          <p>
-            As a tool built for website, plugin, and theme developers, DevKinsta
-            is built for a robust community of WordPress users worldwide. Join
-            our community forum to exchange with others, provide feedback, and
-            contribute to shaping the future of DevKinsta.
-          </p>
+        <div className="seamlessIntegration">
+          <img src={devKinstaIntegration} alt="seamless integration " />
         </div>
       </div>
 
@@ -263,13 +365,13 @@ export default function InformationPages() {
             you’re running.
           </p>
         </div>
-        <div>
+        <div className="poweredByDocker">
           <h2>IMAGE PLACEHOLDER</h2>
         </div>
       </div>
 
       <div className="flexParents">
-        <div>
+        <div className="multilingual">
           <h2>PICTURE PLACEHOLDER</h2>
         </div>
 
