@@ -7,7 +7,6 @@ import HeroPage from './component/HeroPage';
 import InformationPages from './component/InformationPages';
 import Navigation from './component/Navigation';
 import Testimonials from './component/Testimonials';
-import TestingPage from './component/TestingPage';
 
 // import logo from './logo.svg';
 
@@ -26,7 +25,6 @@ function App() {
       <Testimonials />
       <InformationPages />
       <Footer />
-      <TestingPage />
     </div>
   );
 }

@@ -118,7 +118,7 @@ export default function HeroPage() {
   return (
     <section css={heroPageStyle}>
       <main>
-        <div></div>
+        <div />
         <div>
           <h1>Your Free Local WordPress Development Suite</h1>
 
@@ -131,7 +131,7 @@ export default function HeroPage() {
 
           <button>Download DevKinsta</button>
         </div>
-        <div></div>
+        <div />
       </main>
     </section>
   );

@@ -1,99 +1,105 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
-import mainLogo from './images/type-logo-light.svg';
+import facebook from './images/facebook.png';
+import footerglobe from './images/footer-globe.png';
+import footerLogo from './images/footer-logo.png';
+import instagram from './images/instagram.png';
+import twitter from './images/twitter.png';
+import wordpress from './images/wordpress.png';
+import youtube from './images/youtube.png';
 
 // Some variables for repeated values!
 // const logoSize = '180px';
 
-// const headerStyle = css`
-//   width: 100vw;
-//   height: 6rem;
-//   position: relative;
-//   z-index: 100;
+const footerStyle = css`
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-//   div:first-child {
-//     width: 60%;
-//     margin: 0 auto;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     height: 100%;
-//     font-size: 1rem;
-//     font-weight: bold;
+  .footerInfo {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 
-//     button:empty {
-//       background-image: url('${mainLogo}');
-//       background-position: left;
-//       background-size: ${logoSize};
-//       background-repeat: no-repeat;
-//       cursor: pointer;
-//       display: inline;
-//       padding: 0;
-//       width: ${logoSize};
-//       height: 40px;
-//       border: none;
-//       background-color: transparent;
-//     }
+    h3 {
+      font-size: 23px;
+      line-height: 34px;
+      color: #ffffff;
+      font-weight: 700;
+    }
 
-//     nav ul {
-//       display: flex;
-//       grid-gap: 50px;
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      color: #ffffff;
 
-//       li {
-//         list-style: none;
-//         cursor: pointer;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
 
-//         :hover {
-//           text-decoration-line: underline;
-//         }
-//       }
-//     }
+      :hover {
+        text-decoration: underline;
+        text-decoration-thickness: 0.2rem;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
 
-//     button:last-child {
-//       background-color: rgb(44, 212, 217);
-//       background-size: 300% 100%;
-//       font-size: 1rem;
-//       color: #0c022f;
-//       padding: 0.85rem 2rem;
-//       border: none;
-//       border-radius: 30px;
-//       cursor: pointer;
-//       -o-transition: all 0.4s ease-in-out;
-//       -webkit-transition: all 0.4s ease-in-out;
-//       transition: all 0.4s ease-in-out;
+  .footerLastItems {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 
-//       :hover {
-//         background-position: 80% 0;
-//         -o-transition: all 0.4s ease-in-out;
-//         -webkit-transition: all 0.4s ease-in-out;
-//         transition: all 0.4s ease-in-out;
-//         background-image: linear-gradient(
-//           120deg,
-//           rgb(44, 212, 217) 0px,
-//           rgb(44, 212, 217) 50%,
-//           rgb(83, 51, 237) 100%
-//         );
-//         box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
-//         color: #ffffff;
-//       }
-//     }
-//   }
-// `;
+    img {
+      width: 100px;
+    }
+
+    button {
+      background: #07011c;
+      width: 150px;
+      height: 50px;
+      cursor: pointer;
+      color: white;
+      align-self: flex-end;
+      border: none;
+      border-radius: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  .socialMediaIcons {
+    align-self: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-bottom: 5rem;
+
+    img {
+      width: 30px;
+    }
+  }
+`;
 
 export default function Footer() {
   return (
-    <div>
-      <div>
-        <h2>Try DevKinsta today</h2>
-        <p>
-          Streamline your development workflow with DevKinsta by making local
-          site creation a one-click task.
-        </p>
-        <button>Download DevKinsta</button>
-      </div>
-
-      <div>
+    <div css={footerStyle}>
+      <div className="footerInfo">
         <div>
           <h3>DevKinsta</h3>
           <p>Homepage</p>
@@ -118,15 +124,28 @@ export default function Footer() {
           <p>Features</p>
           <p>About Kinsta</p>
         </div>
+      </div>
+      <div className="footerLastItems">
         <div>
-          <h3>FOOTER LOGO HERE</h3>
+          <img src={footerLogo} alt="Footer logo" />
 
-          <h2>OTHER FOOTER ITEMS LIKE COPY RIGHT AND OTHERS</h2>
-          <button>English</button>
+          <p>© 2021 Kinsta Inc. All rights reserved.</p>
+          <p>Legal information</p>
+          <p>Kinsta® and WordPress® are registered trademarks.</p>
         </div>
+        <button>
+          <img src={footerglobe} alt="footer globe icon" />
+          English
+        </button>
       </div>
 
-      <div>SOCIAL MEDIA HERE</div>
+      <div className="socialMediaIcons">
+        <img src={wordpress} alt="footer social media icon" />
+        <img src={facebook} alt="footer social media icon" />
+        <img src={twitter} alt="footer social media icon" />
+        <img src={instagram} alt="footer social media icon" />
+        <img src={youtube} alt="footer social media icon" />
+      </div>
     </div>
   );
 }
