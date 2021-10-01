@@ -85,7 +85,7 @@ export default function Navigation() {
   return (
     <header css={headerStyle}>
       <div>
-        <button></button>
+        <button />
 
         <nav>
           <ul>

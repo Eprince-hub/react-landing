@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { useState } from 'react';
 import message from './Data.js';
 import triangle from './images/PolygonTriangle.svg';
 
