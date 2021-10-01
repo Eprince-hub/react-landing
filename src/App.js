@@ -8,8 +8,6 @@ import InformationPages from './component/InformationPages';
 import Navigation from './component/Navigation';
 import Testimonials from './component/Testimonials';
 
-// import logo from './logo.svg';
-
 const appStyle = css`
   min-height: 100vh;
   background-color: #0c022f;
